@@ -1,0 +1,56 @@
+/*============================== nav bar ============================*/
+.btn-outline-pink {
+    color:#FF1493;
+    border-color:#FF1493;
+}
+.btn-outline-pink:hover {
+    color: black;
+    background-color: #FF1493;
+}
+/*=========================== end nav bar ============================*/
+/*============================== form user ============================*/
+form.user .form-control-user {
+    font-size: 1rem;
+    border-radius: 10rem;
+    padding: 1.5rem 1rem;
+}
+form.user .btn-user {
+    font-size: 1rem;
+    border-radius: 10rem;
+    padding: .75rem 1rem;
+}
+.btn-google {
+    color: #fff;
+    background-color: #ea4335;
+    border-color: #fff;
+}
+.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #fff;
+}
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
+/* --- loginModal --- */
+.custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+}
+.custom-control-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+form.user .custom-checkbox.small label {
+    line-height: 1.5rem;
+}
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+}
+/*============================== end form user ============================*/
