@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('header')
     @include('layouts.navbar')
+    @include('layouts.search')
 @endsection
 @section('contents')
     @if (Session::has('loginError'))

@@ -7,6 +7,9 @@
     color: black;
     background-color: #FF1493;
 }
+.dropdown-item:hover {
+    background-color: #9370DB;
+}
 /*=========================== end nav bar ============================*/
 /*============================== form user ============================*/
 form.user .form-control-user {
@@ -54,3 +57,33 @@ form.user .custom-checkbox.small label {
     vertical-align: top;
 }
 /*============================== end form user ============================*/
+/*============================== search bar ============================*/
+.bg-img {
+    /* The image used */
+    background-image: url("../img/bg.jpg");
+  
+    /* Control the height of the image */
+    min-height: 380px;
+    max-height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+/*============================== end search bar ============================*/
+/*============================== post ============================*/
+.post-img {
+    /* The image used */
+    background-image: url("../img/bg.jpg");
+  
+    /* Control the height of the image */
+    min-height: 340px;
+    max-height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+/*============================== end post ============================*/

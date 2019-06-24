@@ -26,6 +26,9 @@ Route::post('login/website', 'LoginController@Login');
 // ========================== Regis with Web ====================
 Route::post('register/website', 'RegisterController@register');
 Route::get('register/checkEmail', 'RegisterController@checkEmailExists');
+
+// ========================== Post  ========================
+Route::get('post', 'PostController@postForm');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

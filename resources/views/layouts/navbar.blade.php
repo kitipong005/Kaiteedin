@@ -7,26 +7,36 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                    พื้นที่
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">ภาคเหนือ</a>
+                    <a class="dropdown-item" href="#">ภาคกลาง</a>
+                    <a class="dropdown-item" href="#">ภาคตะวันออกเฉียงเหนือ</a>
+                    <a class="dropdown-item" href="#">ภาคตะวันตก</a>
+                    <a class="dropdown-item" href="#">ภาคตะวันออก</a>
+                    <a class="dropdown-item" href="#">ภาคใต้</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        โครงการล่าสุด
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">ภาคเหนือ</a>
+                        <a class="dropdown-item" href="#">ภาคกลาง</a>
+                        <a class="dropdown-item" href="#">ภาคตะวันออกเฉียงเหนือ</a>
+                        <a class="dropdown-item" href="#">ภาคตะวันตก</a>
+                        <a class="dropdown-item" href="#">ภาคตะวันออก</a>
+                        <a class="dropdown-item" href="#">ภาคใต้</a>
+                    </div>
+                </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{action('PostController@postForm')}}">ลงประกาศ <img src="{{asset('img/free.gif')}}" style="width:30%;height:4%;"></a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
