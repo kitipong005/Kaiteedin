@@ -33,6 +33,7 @@ class CreatePostsTable extends Migration
             $table->string('amphoe');
             $table->string('province');
             $table->string('zipcode');
+            $table->string('geo');
             $table->integer('floor')->nullable();
             $table->integer('size')->nullable();
             $table->integer('bedroom')->nullable();

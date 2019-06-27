@@ -18,7 +18,7 @@ class PostController extends Controller
 
     public function postCreate(Request $request)
     {
-        //dd($request);
+        dd($request);
         $this->validate($request, [
             'email' => 'required|email|max:255',
             'name' => 'required|min:3|string',
@@ -40,7 +40,7 @@ class PostController extends Controller
         $post->pro = $request->pro;
         $post->prop = $request->prop;
         $post->topic = $request->topic;
-        $post->slug = make_slug($request->topic);
+        $post->slug = $this->make_slug($request->topic);
         $post->price = $request->price;
         $post->address = $request->address;
         $post->road = $request->road;

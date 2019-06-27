@@ -56,6 +56,13 @@ form.user .custom-checkbox.small label {
     margin-bottom: 0;
     vertical-align: top;
 }
+/* ---- select ----*/
+.custom-select {
+  font-size: 1rem;
+    border-radius: 10rem;
+    padding: 0 1rem 0 1rem;
+    height: 3.2rem;
+}
 /*============================== end form user ============================*/
 /*============================== search bar ============================*/
 .bg-img {
@@ -163,3 +170,57 @@ form.user .custom-checkbox.small label {
 }
 
 /*============================== end post ============================*/
+/*============================== index ============================*/
+.card .card-highlight {
+  padding: 1px 12px 1px 7px;
+  position: absolute;
+  left: 0;
+  margin-top: -20px;
+  text-transform: uppercase;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card-highlight {
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color: white;
+  background-color: #e03d31;
+}
+.card-body p{
+  margin-bottom: .1rem;
+}
+/* ------- card overlay ----------*/
+.img-overlay:hover .text-overlay{
+  opacity: 0.5;
+}
+.text-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.text-show{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*============================== end index ============================*/

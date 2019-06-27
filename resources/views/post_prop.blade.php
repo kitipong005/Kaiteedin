@@ -132,7 +132,7 @@
                 <div class="form-group row justify-content-md-center">
                     <label for="prop" class="col-md-2 col-form-label">ประเภทอสังหาฯ:</label>
                     <div class="col-md-6">
-                        <select class="form-control form-control-user" name="prop">
+                        <select class="form-control custom-select" name="prop">
                             <option value="บ้าน">บ้าน</option>
                             <option value="คอนโด">คอนโด</option>
                             <option value="ทาวน์โฮม">ทาวน์โฮม</option>
@@ -190,6 +190,19 @@
                     <div class="col-md-6">
                         <input type="text" class="form-control form-control-user" id="zipcode"
                             placeholder="รหัสไปรษณีย์...." name="zipcode">
+                    </div>
+                </div>
+                <div class="form-group row justify-content-md-center">
+                    <label for="geo" class="col-md-2 col-form-label">ภูมิภาค:</label>
+                    <div class="col-md-6">
+                        <select class="form-control custom-select" name="geo" required>
+                            <option value="ภาคเหนือ">ภาคเหนือ</option>
+                            <option value="ภาคกลาง">ภาคกลาง</option>
+                            <option value="ภาคตะวันออกเฉียงเหนือ">ภาคตะวันออกเฉียงเหนือ</option>
+                            <option value="ภาคตะวันตก">ภาคตะวันตก</option>
+                            <option value="ภาคตะวันออก">ภาคตะวันออก</option>
+                            <option value="ภาคใต้">ภาคใต้</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group row justify-content-md-center">
