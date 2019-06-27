@@ -24,6 +24,7 @@ class CreatePostsTable extends Migration
             $table->string('pro');
             $table->string('prop');
             $table->string('topic');
+            $table->string('slug')->nullable();
             $table->integer('price');
             $table->string('address')->nullable();
             $table->string('road')->nullable();
@@ -41,6 +42,7 @@ class CreatePostsTable extends Migration
             $table->longText('description')->nullable();
             $table->longText('image');
             $table->date('exp');
+            $table->integer('count')->default(0);
             $table->timestamps();
         });
     }

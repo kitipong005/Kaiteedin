@@ -17,7 +17,7 @@
                                 @if ($errors->has('email'))
                                 <span style="color:red">
                                     <ul>
-                                        <li><small>please Enter Name<small></li>
+                                        <li><small>please Enter Email<small></li>
                                     </ul>
                                 </span>
                                 @endif

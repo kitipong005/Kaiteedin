@@ -25,7 +25,7 @@
 <div class="container mt-5">
     {{-- <div class="row">
         <div class="col-md-12"> --}}
-    <form action="" method="post" class="user" enctype="multipart/form-data">
+    <form action="{{action('PostController@postCreate')}}" method="post" class="user" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="card mb-5">
             <div class="card-header">
@@ -33,18 +33,33 @@
             </div>
             <div class="card-body">
                 <div class="form-group row justify-content-md-center">
-                    <input type="hidden" name="user_id" value="">
                     <label for="name" class="col-md-2 col-form-label">ติดต่อ:</label>
                     <div class="col-md-6">
-                        <input type="text" name="name" class="form-control form-control-user" required>
+                        <input type="text" name="name" class="form-control form-control-user"
+                            value="{{Auth::user()->name}}" required>
                     </div>
                 </div>
+                @if ($errors->has('name'))
+                <span style="color:red">
+                    <ul>
+                        <li><small>please Enter Name<small></li>
+                    </ul>
+                </span>
+                @endif
                 <div class="form-group row justify-content-md-center">
                     <label for="email" class="col-md-2 col-form-label">อีเมลย์:</label>
                     <div class="col-md-6">
-                        <input type="text" name="email" class="form-control form-control-user" required>
+                        <input type="text" name="email" class="form-control form-control-user"
+                            value="{{Auth::user()->email}}" required>
                     </div>
                 </div>
+                @if ($errors->has('email'))
+                <span style="color:red">
+                    <ul>
+                        <li><small>please Enter Email<small></li>
+                    </ul>
+                </span>
+                @endif
                 <div class="form-group row justify-content-md-center">
                     <label for="tel" class="col-md-2 col-form-label">เบอร์โทรติดต่อ:</label>
                     <div class="col-md-6">
@@ -52,6 +67,13 @@
                             placeholder="เบอร์โทรศัพท์ใช้ติดต่อ..." required>
                     </div>
                 </div>
+                @if ($errors->has('tel'))
+                <span style="color:red">
+                    <ul>
+                        <li><small>please Enter Telephone Number<small></li>
+                    </ul>
+                </span>
+                @endif
             </div>
         </div>
         {{-- end card profile --}}
@@ -66,6 +88,13 @@
                         <input type="text" name="topic" class="form-control form-control-user"
                             placeholder="หัวข้อประกาศ..." required>
                     </div>
+                    @if ($errors->has('topic'))
+                    <span style="color:red">
+                        <ul>
+                            <li><small>please Enter Topic<small></li>
+                        </ul>
+                    </span>
+                    @endif
                     <p class="text-danger">*** หัวข้อประกาศไม่ควรยาวหรือสั้นจนเกินไป
                         เพราะจะทำให้ประกาศของคุณขาดความน่าสนใจ ***</p>
                 </div>
@@ -90,11 +119,11 @@
                     <label for="pro" class="col-md-2 col-form-label">สภาพ:</label>
                     <div class="col-md-6">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="pro" value="สำหรับขาย">
+                            <input class="form-check-input" type="radio" name="pro" value="มือหนึ่ง">
                             <label class="form-check-label" for="inlineRadio1">มือหนึ่ง</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="pro" value="สำหรับเช่า">
+                            <input class="form-check-input" type="radio" name="pro" value="มือสอง">
                             <label class="form-check-label" for="inlineRadio2">มือสอง</label>
                         </div>
                     </div>
@@ -118,8 +147,8 @@
                 <div class="form-group row justify-content-md-center">
                     <label for="address_name" class="col-md-2 col-form-label">ชื่อโครงการหรือหมู่บ้าน:</label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control form-control-user" placeholder="ชื่อโครงการหรือหมู่บ้าน...."
-                            name="address_name">
+                        <input type="text" class="form-control form-control-user"
+                            placeholder="ชื่อโครงการหรือหมู่บ้าน...." name="address_name">
                     </div>
                 </div>
                 <div class="form-group row justify-content-md-center">
@@ -166,7 +195,7 @@
                 <div class="form-group row justify-content-md-center">
                     <label for="floor" class="col-md-2 col-form-label">จำนวนชั้น:</label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control form-control-user" placeholder="จำนวนชั้น...."
+                        <input type="number" class="form-control form-control-user" placeholder="จำนวนชั้น...."
                             name="floor">
                     </div>
                 </div>
@@ -236,7 +265,7 @@
                         <label for="image" class="col-md-2 col-form-label" id="label-name">รูปภาพ:</label>
                         <div class="col-md-6">
                             <div class="input-group mb-3">
-                                <input type="file" class="form-control" name="image[]">
+                                <input type="file" class="form-control" name="image[]" required>
                                 <div class="input-group-append">
                                     <button class="btn btn-primary" type="button" id="Addpic">+</button>
                                 </div>

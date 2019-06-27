@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
+// Route::get('/', function () {
+//     return view('index');
+// });
+Route::get('/', 'IndexController@index');
 // ========================== Login with facebook ====================
 Route::get('login/facebook', 'LoginController@redirectToProviderFacebook');
 Route::get('login/facebook/callback', 'LoginController@handleProviderCallbackFacebook');
@@ -29,6 +29,11 @@ Route::get('register/checkEmail', 'RegisterController@checkEmailExists');
 
 // ========================== Post  ========================
 Route::get('post', 'PostController@postForm');
+Route::post('post', 'PostController@postCreate');
+
+// ========================== View  ========================
+Route::get('view/{id}/{slug}', 'PropertyController@viewProp');
+
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
