@@ -222,5 +222,26 @@ form.user .custom-checkbox.small label {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+/* ------ ul in โครงการที่น่าสนใจ ------ */
+.card-body ul{
+  list-style-type: none;
+}
+.card-body ul li a:link{
+  color:black;
+}
+.card-body ul li a:visited{
+  color:black;
+}
+.card-body ul li a:hover{
+  color: red;
+  font-size: 17px;
+}
+/* ------------ tag a in 6 new project ------ */
+.new-project:hover{
+  transform: scale(1.1);
+  -webkit-box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
 
+}
 /*============================== end index ============================*/
